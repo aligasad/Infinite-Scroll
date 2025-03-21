@@ -10,6 +10,7 @@ let images = [];
 
 const loader = document.querySelector('#loader');
 const imageDiv = document.querySelector("#img-container");
+const heading = document.querySelector("#heading");
 
 
 
@@ -44,7 +45,7 @@ async function displayPhotos(arr) {
 
     anchor.href = obj.links.html;
     image.loading = "lazy";
-    image.src = obj.urls.small_s3;
+    image.src = obj.urls.regular;
     image.title = obj.alt_description;
 
     anchor.append(image);
@@ -59,5 +60,6 @@ window.addEventListener("scroll", () => {
   // if(window.scrollY + window.innerHeight >= document.body.offsetHeight){
   //   getPhotos();
   // }
+  heading.style.background = "#008B8B";
 });
 
